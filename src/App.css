@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: rgb(100, 99, 99);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: center; /* Center the container horizontally */
+  padding: 15%;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Adding a standard font */
+}
+
+.container {
+  padding: 10px;
+  border: 2px solid;
+  width: 100%;
+  max-width: 500px; /* Limit the container width */
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   color: white;
+  margin: 0 20px; /* Adjust the margin for responsiveness */
 }
 
-.App-link {
-  color: #61dafb;
+.head {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading text */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input {
+  padding: 10px;
+  border: none; /* Remove the default border */
+  border-radius: 10px;
+  width: 100%; /* Make input take full width of container */
+  max-width: 100%; /* Ensure input doesn't exceed container width */
+  box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+input:hover {
+  background-color: rgb(173, 171, 171);
+}
+
+input:focus {
+  border: 0px;
+  background-color: beige;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  body {
+    padding: 10%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    width: 100%;
+    max-width: 90%; /* Make the container occupy more width on smaller screens */
+    margin-left: 0;
+  }
+
+  .head {
+    font-size: 18px;
+  }
+
+  input {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5%;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .head {
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 6px;
   }
 }
